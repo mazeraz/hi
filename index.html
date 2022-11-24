@@ -1,0 +1,179 @@
+
+<html>  
+<head>  
+    <title>PHP login system</title>  
+    
+</head>  
+<body>  
+<div id="loginstuff">
+    <div class="st">
+        <img class="sts" src="deads.gif" alt="Mr Bryan" height="150" width="auto">
+    </div>
+    <div class = "frm">  
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+        <div class="accesspoint">
+            <p class="access"> Log in to <a style="color: aliceblue;">access</a> Bryan's Vault</p>
+        </div>
+        <div class="form">
+            <p>  
+                <label> UserName: </label>  
+                <input class="type-1" type = "text" id ="user" name  = "user" />  
+            </p>  
+            <p>  
+                <label> Password: </label>  
+                <input class="type-1" type = "password" id ="pass" name  = "pass" />  
+            </p>  
+        </div>
+        <div class="buttonlog">
+            <p>     
+                <input type =  "submit" class= "btn" value = "Enter" />  
+            </p>  
+        </div>
+        </form>  
+        
+    </div>  
+</div>
+
+<div class="aiden">
+    <img src="aiden.gif" alt="aiden character gif" height="140" width="auto">
+</div>
+
+
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return true;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return true; 
+                    }  
+                }                             
+            }  
+        </script>  
+</body>     
+</html>  
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,100&display=swap');
+
+.type-1 {
+  background-color: #fafafa;
+  border:0;
+  box-shadow:0 0 4px rgb(0, 204, 255);
+  transition: .3s box-shadow;
+}
+.type-1:hover {
+  border: 1px solid rgb(0, 204, 255);
+}
+
+
+
+
+
+
+
+
+    @font-face {
+        font-family: Hacked;
+        src: url(HACKED.ttf);
+    }
+
+    .form {
+        position: relative;
+        padding-left: 70px;
+    }
+
+    .aiden {
+        position: absolute;
+        left: 500px;
+        top: 370px;
+        
+    }
+
+    .access {
+        color: red;
+        font-size: 30px;
+    }
+
+
+    .sts {
+        cursor: pointer;
+    }
+
+    #loginstuff {
+        position: absolute;
+        padding-left: 35px;
+        top: 150px;
+    }
+
+    .st img {
+        position: relative;
+        text-align: center;
+        border: 2px solid white;
+        margin-inline: 580px;
+        bottom: -18px;
+        z-index: 2;
+        transition: .3s;
+    }
+
+    .st img:hover {
+        transform: scale(1.03);
+    }
+    
+    .frm {
+        border: 2px solid black;
+        margin-inline: 450px;
+        position: relative;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.534) ;
+        background-image: url(coins.gif);
+        background-blend-mode: darken ;
+        color: rgb(0, 204, 255);
+        font-family: "Hacked";
+        border: 2px solid white;
+    }
+    
+    .frm h1 {
+        font-size: 50px;
+        
+    }
+    
+    .btn {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: rgb(160, 0, 0);
+        color: white;
+        transition: .5s ;
+        cursor: pointer;
+        position: relative;
+        left: 120px;
+            
+    }
+
+    .buttonlog {
+        transition: 1s ;
+    }
+    
+    .buttonlog input:hover{
+        color: rgb(253, 0, 0);
+        transform: scale(1.1);
+    }
+    
+    body {
+        background-image: url(bg.gif);
+        
+    }
+    </style>
